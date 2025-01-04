@@ -10,8 +10,9 @@ radius = 6.0
 script = ExtResource("1_mrv6d")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -8)
 texture = ExtResource("1_swmuo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 2)
+position = Vector2(0, -6)
 shape = SubResource("CircleShape2D_fpew3")
