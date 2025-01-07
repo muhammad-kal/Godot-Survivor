@@ -1,11 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://bvj6jjnw2nono"]
+[gd_scene load_steps=6 format=3 uid="uid://bvj6jjnw2nono"]
 
 [ext_resource type="PackedScene" uid="uid://deew3i3yphqm5" path="res://Scenes/Player/player.tscn" id="1_4lmtx"]
 [ext_resource type="PackedScene" uid="uid://cu7ad551l5fnk" path="res://Scenes/Camera/player_camera.tscn" id="1_7kpfj"]
+[ext_resource type="PackedScene" uid="uid://bx1ddijd8t3o3" path="res://Scenes/Serangan_controller/serangan_controller.tscn" id="1_hxocf"]
 [ext_resource type="TileSet" uid="uid://ck1oewooeupv2" path="res://Scenes/Tileset/Tileset.tres" id="2_h4dbw"]
 [ext_resource type="PackedScene" uid="uid://2vkmgra17h83" path="res://Scenes/Musuh_basic/musuh_basic.tscn" id="4_ah68k"]
 
 [node name="Main" type="Node"]
+
+[node name="SeranganManager" type="Node" parent="."]
+
+[node name="Serangan_controller" parent="SeranganManager" instance=ExtResource("1_hxocf")]
 
 [node name="PlayerCamera" parent="." instance=ExtResource("1_7kpfj")]
 

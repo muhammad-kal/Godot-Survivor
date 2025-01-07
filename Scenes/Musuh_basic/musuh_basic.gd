@@ -1,24 +1,21 @@
 extends CharacterBody2D
 
-@export var kecepatan_musuh = 75
+@export var kecepatan = 75
 
-var node_player
+var player_node 
 
 func _ready() -> void:
-	node_player = get_tree().get_first_node_in_group("player")
+	player_node = get_tree().get_first_node_in_group("player")
 	
 func _physics_process(delta: float) -> void:
-	lokasi_player()
-	jalan_ke_player()
-	
-func lokasi_player():
-	if node_player :
-		var lokasi_player = (node_player.global_position - global_position).normalized()
-		print(lokasi_player)
-		return lokasi_player
-	return Vector2.ZERO
-	
-func jalan_ke_player():
-	var arah_ke_player = lokasi_player()
-	velocity = arah_ke_player * kecepatan_musuh 
+	velocity = set_posisi_player() * kecepatan
 	move_and_slide()
+	
+func set_posisi_player():
+	if player_node:
+		var posisi_player
+		posisi_player = (player_node.global_position - global_position).normalized()
+		return posisi_player
+		
+
+		
