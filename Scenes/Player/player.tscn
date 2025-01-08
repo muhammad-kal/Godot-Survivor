@@ -1,13 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://deew3i3yphqm5"]
+[gd_scene load_steps=5 format=3 uid="uid://deew3i3yphqm5"]
 
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_mrv6d"]
 [ext_resource type="Texture2D" uid="uid://bu4nqxwho5end" path="res://Scenes/Player/Player.png" id="1_swmuo"]
+[ext_resource type="PackedScene" uid="uid://bx1ddijd8t3o3" path="res://Scenes/Serangan_controller/serangan_controller.tscn" id="2_kgdyg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fpew3"]
 radius = 6.0
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
+collision_layer = 0
+collision_mask = 0
 script = ExtResource("1_mrv6d")
+
+[node name="SeranganManager" type="Node" parent="."]
+
+[node name="Serangan_controller" parent="SeranganManager" instance=ExtResource("2_kgdyg")]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -8)

@@ -5,6 +5,7 @@
 
 [node name="Serangan_controller" type="Node"]
 script = ExtResource("1_av7uq")
+Area_Serangan = 12.247
 Serangan = ExtResource("2_5mk25")
 
 [node name="Timer" type="Timer" parent="."]

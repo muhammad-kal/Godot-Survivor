@@ -6,7 +6,8 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_bhtul"]
 radius = 5.09902
 
-[node name="MusuhBasic" type="CharacterBody2D"]
+[node name="MusuhBasic" type="CharacterBody2D" groups=["musuh"]]
+collision_layer = 0
 script = ExtResource("1_nlbws")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
