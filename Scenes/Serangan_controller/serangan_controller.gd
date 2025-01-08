@@ -5,7 +5,8 @@ extends Node
 
 func _ready() -> void:
 	$Timer.timeout.connect(timer_timeout)
-	
+		
+
 func _process(delta: float) -> void:
 	pass
 
@@ -29,6 +30,10 @@ func timer_timeout():
 		return posisi_a < posisi_b
 	)
 	
-	var serangan_instance = Serangan.instantiate()
+	var serangan_instance : Node2D = Serangan.instantiate()
 	node_player.get_parent().add_child(serangan_instance)
 	serangan_instance.global_position = musuh_musuh[0].global_position
+	serangan_instance.global_position += Vector2.RIGHT.rotated(randf_range(0,TAU)) * 4
+	
+	var angle_musuh : Vector2 = musuh_musuh[0].global_position - serangan_instance.global_position
+	serangan_instance.rotation = angle_musuh.angle()
