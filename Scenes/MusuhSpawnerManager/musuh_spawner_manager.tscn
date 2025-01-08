@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://8l23blaij0wp"]
+
+[ext_resource type="Script" path="res://Scenes/MusuhSpawnerManager/musuh_spawner_manager.gd" id="1_nahrk"]
+[ext_resource type="PackedScene" uid="uid://2vkmgra17h83" path="res://Scenes/Musuh_basic/musuh_basic.tscn" id="2_ya7pl"]
+
+[node name="musuhSpawnerManager" type="Node"]
+script = ExtResource("1_nahrk")
+musuh = ExtResource("2_ya7pl")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
