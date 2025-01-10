@@ -13,4 +13,4 @@ func kamera_ke_player():
 	if player_node :
 		lokasi_player = player_node.global_position
 		#global_position = global_position.lerp(lokasi_player, 1.0 - pow(-delta ,10))
-		global_position = lerp(global_position, lokasi_player,get_physics_process_delta_time() * 7)
+		global_position = lerp(global_position, lokasi_player,get_physics_process_delta_time() * 15)

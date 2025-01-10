@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var kecepatan = 75
+@export var kecepatan = 50
 
 var player_node 
 
